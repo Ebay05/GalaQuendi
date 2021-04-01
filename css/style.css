@@ -16,6 +16,7 @@
   --dark-white: #b7bbbe;
   --medium-white: #e9ecef;
   --light-white: #ffffff;
+  --white-with-opacity: rgba(255, 255, 255, 0.8);
   font-size: 16px;
 }
 
@@ -27,7 +28,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   line-height: 200%;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--white-with-opacity);
 }
 
 *::selection{
@@ -139,7 +140,7 @@ input[type=checkbox] {
 
 input[type=checkbox] + label:before {
   content: "\2714";
-  border: 0.125rem solid rgba(255,255,255,.8);
+  border: 0.125rem solid var(--white-with-opacity);
   border-radius: 0.2rem;
   width: 1.2rem;
   height: 1.2rem;
@@ -153,11 +154,11 @@ input[type=checkbox] + label:before {
 input[type=checkbox]:checked + label:before {
   background-color: #00726C;
   border-color: #00726C;
-  color: rgba(255,255,255,.8);
+  color: var(--white-with-opacity);
 }
 
 input[type=checkbox]:disabled + label:before {
-  border-color: rgba(255,255,255,.8);
+  border-color: var(--white-with-opacity);
 }
 
 input[type=checkbox]:checked:disabled + label:before {
@@ -189,6 +190,46 @@ input[type=checkbox]:checked:disabled + label:before {
 }
 
 hr{
-  width: 80%;
-  background: rgba(255,255,255,.8);
+  width: 85%;
+  background: var(--white-with-opacity);
 }
+
+/******* MEDIAS *******/
+
+/******** Tablet ********/
+
+@media screen and (max-width: 992px) {
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 2rem;
+  }
+
+button {
+  padding: 1rem 2rem;
+}
+}
+
+/******** Smartphones ********/
+
+@media screen and (max-width: 688px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p{
+    font-size: .75rem;
+  }
+
+  button {
+    padding: 1rem 2rem;
+  }
+  }
