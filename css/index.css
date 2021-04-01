@@ -277,5 +277,6 @@ footer {
 
   #features .item {
     margin: 2rem auto;
+    padding: 0 1rem;
   }
 }
