@@ -30,7 +30,7 @@ footer {
 
 /******* NAV *******/
 
-nav {
+.top-bar{
   background: var(--dark-green);
   padding: 0 4rem;
 }
@@ -64,6 +64,16 @@ button:hover {
 .last-nav-item {
   position: relative;
   left: -8.1rem;
+}
+
+nav button{
+  display: none;
+}
+
+/* hamburger menu */
+
+.hamburger-menu-none{
+  display: none;
 }
 
 /******* LOGIN SECTION *******/
@@ -113,6 +123,12 @@ button:hover {
   transition: 0.2s;
 }
 
+#downloadSec a:nth-child(4),
+#downloadSec a:nth-child(5)
+{
+  display: none;
+}
+
 #downloadSec img {
   width: 5rem;
   height: 5rem;
@@ -154,6 +170,32 @@ footer {
 
 /******* MEDIAS *******/
 
+/******** Laptop ********/
+
+@media screen and (max-width: 1198px) {
+  
+  /* padding */
+
+  #loginSec,
+  #downloadSec,
+  #features {
+    padding: 2rem 4rem;
+  }
+
+  /* NAV */
+
+  .gray-link {
+    display: none;
+  }
+
+  /* Login Section */
+
+  #loginSec .responsive-promo {
+    width: 20rem;
+  }
+
+}
+
 /******** Tablet ********/
 
 @media screen and (max-width: 992px) {
@@ -168,6 +210,24 @@ footer {
 
   /* NAV */
 
+  nav{
+    justify-content: space-between;
+  }
+
+  nav div{
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  nav button{
+    display: block;
+  }
+
+  nav button img{
+    width: 2.5rem;
+    height: auto;
+  }
+
   nav .brand-name {
     font-size: 3rem;
   }
@@ -176,14 +236,31 @@ footer {
     display: none;
   }
 
+  /* hamburger menu */
+
+  .hamburger-menu-container{
+    background-color: var(--medium-gray);
+    padding: 0 4rem;
+    animation: unfolding 2s 1 ease-in;
+  }
+
+  @keyframes unfolding{
+    from{
+      display: none;
+    }
+    to{
+      display: block;
+    }
+  }
+
+  .hamburger-menu-container > a{
+    display: block;
+  }
+
   /* Login Section */
 
   #loginSec {
     flex-direction: column-reverse;
-  }
-
-  #loginSec .responsive-promo {
-    transform: scale(0.7);
   }
 
   #login-form{
@@ -192,14 +269,25 @@ footer {
 
   /* Download Section */
 
-  #downloadSec div {
-    flex-direction: column;
-  }
-
   #downloadSec a {
     transform: scale(0.8);
-    margin: 0 0.5rem;
+    margin: 0 .5rem;
+    filter: saturate(100%);
   }
+
+  #downloadSec a:nth-child(1),
+  #downloadSec a:nth-child(2),
+  #downloadSec a:nth-child(3)
+  {
+    display: none;
+  }
+
+  #downloadSec a:nth-child(4),
+  #downloadSec a:nth-child(5)
+  {
+    display: flex;
+  }
+  
 
   /* FEATURES Section */
   
@@ -224,10 +312,6 @@ footer {
   }
 
   /* NAV */
-  
-  nav {
-    padding: 0 2rem;
-  }
 
   nav .brand-name {
     font-family: "Sacramento", sans-serif;
@@ -262,7 +346,21 @@ footer {
 
   #downloadSec a {
     transform: scale(0.8);
-    margin: 0 0.5rem;
+    margin: 0 .5rem;
+    filter: saturate(100%);
+  }
+
+  #downloadSec a:nth-child(1),
+  #downloadSec a:nth-child(2),
+  #downloadSec a:nth-child(3)
+  {
+    display: none;
+  }
+  
+  #downloadSec a:nth-child(4),
+  #downloadSec a:nth-child(5)
+  {
+    display: flex;
   }
 
   /* Features Section */

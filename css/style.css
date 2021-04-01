@@ -98,9 +98,10 @@ button {
 button {
   background: #00726c;
   padding: 0.5rem 1rem;
+  color: var(--light-white);
   text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 button,
@@ -190,7 +191,7 @@ input[type=checkbox]:checked:disabled + label:before {
 }
 
 hr{
-  width: 85%;
+  width: 90%;
   background: var(--white-with-opacity);
 }
 

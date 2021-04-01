@@ -8,10 +8,7 @@
 
     <!-- CSS Core -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/index.css">
-
-    <!-- JS Core -->
-    <link rel="stylesheet" href="js/main.js" />
+    <link rel="stylesheet" href="css/index.css" />
 
     <!-- Fonts -->
 
@@ -22,12 +19,22 @@
     />
   </head>
   <body class="dflex flex-center fd-col">
-
     <!-- NAVIGATION -->
-    <nav class="dflex">
-      <a href="" class="brand-name">GalaQuendi</a>
-      <div class="dflex flex-center gray-link"><a href="">O Autorze</a></div>
-      <div class="dflex flex-center gray-link last-nav-item"><a href="">Inne projekty</a></div>
+    <nav class="">
+      <div class="dflex top-bar">
+        <a href="" class="brand-name">GalaQuendi</a>
+        <div class="dflex flex-center gray-link"><a href="">O Autorze</a></div>
+        <div class="dflex flex-center gray-link last-nav-item">
+          <a href="">Inne projekty</a>
+        </div>
+        <button id="hamburger-menu-btn">
+          <img src="svg/hamburger-menu.svg" alt="" />
+        </button>
+      </div>
+      <div id="hamburger-menu-container">
+        <a href="">O Autorze</a>
+        <a href="">Inne projekty</a>
+      </div>
     </nav>
 
     <!-- LOGIN SECTION -->
@@ -66,11 +73,21 @@
     <section id="downloadSec" class="dflex flex-center fd-col">
       <h1>Pobierz na</h1>
       <div class="dflex fd-row flex-center">
-        <a href="" class="dflex fd-col"><img src="svg/windows.svg" alt="windows.svg" />Windows</a>
-        <a href="" class="dflex fd-col"><img src="svg/linux.svg" alt="linux.svg" />Linux</a>
-        <a href="" class="dflex fd-col"><img src="svg/apple.svg" alt="apple.svg" />Mac</a>
-        <a href="" class="dflex fd-col"><img src="svg/android.svg" alt="android.svg" />Android</a>
-        <a href="" class="dflex fd-col"><img src="svg/apple.svg" alt="apple.svg" />IOS</a>
+        <a href="" class="dflex fd-col"
+          ><img src="svg/windows.svg" alt="windows.svg" />Windows</a
+        >
+        <a href="" class="dflex fd-col"
+          ><img src="svg/linux.svg" alt="linux.svg" />Linux</a
+        >
+        <a href="" class="dflex fd-col"
+          ><img src="svg/apple.svg" alt="apple.svg" />Mac</a
+        >
+        <a href="" class="dflex fd-col"
+          ><img src="svg/android.svg" alt="android.svg" />Android</a
+        >
+        <a href="" class="dflex fd-col"
+          ><img src="svg/apple.svg" alt="apple.svg" />IOS</a
+        >
       </div>
     </section>
 
@@ -128,7 +145,14 @@
 
     <footer>
       <p>GalaQuendi CC 2021</p>
-      <p>Ikony są własnością <a href="www.flaticon.com" target="_blank">flaticon.com</a> a ilustracje <a href="https://undraw.co/illustrations" target="_blank">undraw.co</a></p>
+      <p>
+        Ikony są własnością
+        <a href="www.flaticon.com" target="_blank">flaticon.com</a> a ilustracje
+        <a href="https://undraw.co/illustrations" target="_blank">undraw.co</a>
+      </p>
     </footer>
+
+    <!-- JS Core -->
+    <script src="js/main.js"></script>
   </body>
 </html>
