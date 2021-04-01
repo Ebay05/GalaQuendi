@@ -1,0 +1,189 @@
+/*******************************
+    Author: Aleksandra Mazan
+    Website: GalaQuendi
+    Date: 20.03.2021
+    File: index.css
+    Styles for login site
+********************************/
+
+/******* Defaults *******/
+
+/* paddings & margins */
+
+#loginSec,
+#downloadSec,
+#features {
+  padding: 4rem 8rem;
+}
+
+nav,
+#loginSec,
+.responsive-promo img,
+#downloadSec,
+#downloadSec div,
+#features,
+#features div,
+input[type="text"],
+footer
+ {
+  width: 100%;
+}
+
+/******* NAV *******/
+
+nav {
+    background: var(--dark-green);
+    padding: 0 4rem;
+  }
+  
+  .brand-name {
+    font-family: "Sacramento", sans-serif;
+    font-size: 4rem;
+    padding-right: 4rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 3rem 0;
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+  
+  .gray-link {
+    background: var(--nav-links-color);
+    width: 32rem;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+  
+  nav .gray-link:hover,
+  button:hover{
+    background: var(--dark-gray);
+    transition: .2s;
+  }
+  
+  .last-nav-item {
+    position: relative;
+    left: -8.1rem;
+  }
+  
+  /******* LOGIN SECTION *******/
+  
+  #loginSec {
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .responsive-promo{
+    text-align: center;  
+  }
+  
+  .responsive-promo img {
+    height: auto;
+  }
+  
+  /* Login Form */
+  
+  #login-form > * {
+    margin: 1rem 0;
+  }
+  
+  .forgottenPass {
+    margin-left: 2rem;
+  }
+  
+  /******* DOWNLOAD SECTION *******/
+  
+  #downloadSec a {
+    text-align: center;
+    margin: 0 3rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  #downloadSec a {
+    filter: saturate(0%);
+  }
+  
+  #downloadSec a:hover {
+    filter: saturate(100%);
+    transform: scale(1.1);
+    transition: .2s;
+  }
+  
+  #downloadSec img {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto 2rem auto;
+  }
+  
+  /******* FEATURES SECTION *******/
+  
+  #features div:first-child {
+    margin-bottom: 2rem;
+  }
+
+  #features img{
+    fill: rgba(255,255,255,.8);
+    width: auto;
+    height: 5rem;
+  }
+  
+  #features .item{
+      width: 24rem;
+      text-align: center;
+  }
+
+  #features .item img{
+    margin-bottom: 1rem;
+  }
+  
+  
+  /******* FOOTER *******/
+  
+  footer{
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--medium-gray);
+  }
+  
+  /* MEDIAS */
+  
+  /* Tablet */
+  
+  @media screen and (max-width: 768px){
+    .gray-link{
+      display: none;
+    }
+  
+    #loginSec{
+      flex-direction: column-reverse;
+    }
+  
+    #loginSec .responsive-promo{
+      transform: scale(.7);
+    }
+  
+    #downloadSec a {
+      transform: scale(.8);
+      margin: 0 .5rem;
+    }
+  
+    #features div {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  
+    #features div > div {
+      flex-direction: column;
+    }
+
+    #features div:first-child {
+        margin-bottom: 2rem;
+      }
+
+      #features .item{
+          margin: 2rem auto;
+    }
+  }

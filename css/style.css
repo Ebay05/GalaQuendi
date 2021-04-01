@@ -12,6 +12,7 @@
   --dark-gray: #212529;
   --medium-gray: #282c30;
   --light-gray: #2e3236;
+  --nav-links-color: #40454a;
   --dark-white: #b7bbbe;
   --medium-white: #e9ecef;
   --light-white: #ffffff;
@@ -31,7 +32,7 @@
 
 *::selection{
     color: var(--light-green);
-    background: var(--dark-green);
+    background: var(--light-gray);
 }
 
 button,
@@ -56,6 +57,7 @@ h6 {
   text-transform: uppercase;
   margin-bottom: 4rem;
   letter-spacing: 2px;
+  color: var(--light-white);
 }
 
 h1 {
@@ -63,13 +65,22 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 2rem;
 }
+
+h3 {
+  font-size: 1.75rem;
+}
+
+/* Inputs */
 
 input[type="text"] {
   padding: 0.5rem 1rem;
   background: transparent;
-  width: 100%;
+}
+
+input::placeholder{
+  color: rgba(255, 255, 255, 0.5);
 }
 
 input[type="text"],
@@ -83,12 +94,36 @@ button {
   border-radius: .125rem;
 }
 
+button {
+  background: #00726c;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+button,
+button:focus,
+input{
+  border: 0;
+  outline: 0;
+}
+
+/* cursor & links */
+
 a,
 input[type=checkbox] + label,
 button{
   cursor: pointer;
 }
 
+#loginSec a:hover,
+#downloadSec a:hover,
+#features a:hover,
+footer  a:hover{
+  filter: brightness(.8);
+  transition: .2s;
+}
 
 /* checkbox */
 
@@ -130,26 +165,7 @@ input[type=checkbox]:checked:disabled + label:before {
   border-color: #B7BBBE;
 }
 
-/* checkbox end */
-
-
-button {
-  background: #00726c;
-  padding: 0.5rem 1rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-button,
-button:focus,
-input{
-  border: 0;
-  outline: 0;
-}
-
-
-/* Flexbox */
+/* flexbox */
 
 .dflex {
   display: flex;
@@ -168,150 +184,11 @@ input{
   align-items: center;
 }
 
-/* Paddings */
-
-#loginSec,
-#downloadSec,
-#features {
-  padding: 4rem 8rem;
-  width: 100%;
-}
-
-.item img{
-  margin-bottom: 1rem;
-}
-
-.item{
-  text-align: center;
-}
-
-#features div > div:first-child{
-  margin-bottom: 2rem;
-}
-
-/******* NAV *******/
-
-nav {
-  width: 100%;
-  background: var(--dark-green);
-  padding: 0 4rem;
-}
-
-.app-name {
-  font-family: "Sacramento", sans-serif;
-  font-size: 4rem;
-  padding-right: 4rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 3rem 0;
-  font-size: 2rem;
-  text-transform: capitalize;
-}
-
-.gray-link {
-  background: #40454a;
-  width: 32rem;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  justify-content: center;
-  align-items: center;
-}
-
-nav .gray-link:hover,
-input[type="checkbox"]:hover,
-button:hover{
-  background: var(--dark-gray);
-  transition: .2s;
-}
-
-.last-nav-item {
-  position: relative;
-  left: -8.1rem;
-}
-
-/******* LOGIN SECTION *******/
-
-#loginSec {
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.responsive-promo h2 {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-/* Login Form */
-
-#login-form > * {
-  margin: 1rem 0;
-}
-
-
-#forgottenPass {
-  margin-left: 2rem;
-}
-
-/******* DOWNLOAD SECTION *******/
-
-#downloadSec div {
-  width: 100%;
-}
-
-#downloadSec a {
-  text-align: center;
-  margin: 0 3rem;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-#downloadSec a {
-  filter: saturate(0%);
-}
-
-#downloadSec a:hover {
-  filter: saturate(100%);
-  transform: scale(1.1);
-  transition: .2s;
-}
-
-#downloadSec a img {
-  margin-bottom: 2rem;
-}
-
-/******* FEATURES SECTION *******/
-
-#features div{
-    width: 100%;
-}
-
-#features img{
-  fill: rgba(255,255,255,.8);
-  width: auto;
-  height: 4rem;
-}
-
 .jc-sa{
     justify-content: space-around;
 }
 
-#features .item{
-    width: 24rem;
-}
-
 hr{
-    width: 80%;
-    background: rgba(255,255,255,.8);
-}
-
-/******* FOOTER *******/
-
-footer{
-  width: 100%;
-  text-align: center;
-  padding: 1rem 0;
-  background: var(--medium-gray);
+  width: 80%;
+  background: rgba(255,255,255,.8);
 }
