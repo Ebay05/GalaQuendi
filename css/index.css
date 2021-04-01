@@ -152,7 +152,7 @@ nav {
   
   /* Tablet */
   
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 992px){
     .gray-link{
       display: none;
     }
