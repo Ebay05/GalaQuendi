@@ -136,7 +136,7 @@ button:hover {
 }
 
 #features .item {
-  width: 24rem;
+  padding: 0 1rem;
   text-align: center;
 }
 
