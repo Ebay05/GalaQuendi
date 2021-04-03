@@ -30,7 +30,8 @@ footer {
 
 /******* NAV *******/
 
-nav {
+.top-bar,
+.nav-links {
   width: 100%;
   background: var(--dark-green);
   height: 12vh;
@@ -40,17 +41,17 @@ nav a{
   text-decoration: none;
 }
 
-nav .logo a{
+.top-bar .logo a{
   font-family: 'Sacramento', sans-serif;
   font-size: 3rem;
   padding-left: 4rem;
 }
 
-nav .nav-links{
+.nav-links{
   list-style: none;
-  width: 40%;
-  height: 100%;
+  width: 60%;
   font-size: 2rem;
+  padding-right: 4rem;
 }
 
 nav .nav-links li,
@@ -169,40 +170,51 @@ footer {
     padding: 2rem 4rem;
   }
 
-    /* NAV */
+   /* NAV */
 
-    nav .nav-links{
-      display: none;
-    }
+   nav .logo a{
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+
+  nav .nav-links{
+    display: none;
+  }
+
+  .hamburger{
+    cursor: pointer;
+    padding-right: 1rem;
+    transform: scale(.8);
+  }
+
+  .line{
+    background: var(--light-white);
+    width: 3rem;
+    height: .25rem;
+    border-radius: .35rem;
+  }
+
+  .line:nth-child(1),
+  .line:nth-child(2){
+    margin-bottom: .75rem;
+  }
   
-    .hamburger{
-      cursor: pointer;
-      padding-right: 4rem;
-    }
-  
-    .line{
-      background: var(--light-white);
-      width: 3rem;
-      height: .25rem;
-      border-radius: .35rem;
-    }
-  
-    .line:nth-child(1),
-    .line:nth-child(2){
-      margin-bottom: .75rem;
-    }
-  
-    .open{
-      display: flex;
-      background: var(--medium-green);
-      flex-direction: column;
-      position: absolute;
-      width: 100%;
-      height: 88vh;
-      bottom: 0;
-      z-index: 9;
-      font-size: 2rem;
-    }  
+  .top-bar-open{
+    z-index: 9;
+    top: 0;
+    position: fixed;
+  }
+
+  .links-open{
+    display: flex;
+    background: var(--dark-gray);
+    flex-direction: column;
+    width: 100%;
+    height: 88vh;
+    bottom: 0;
+    z-index: 9;
+    font-size: 2rem;
+  }
 
   /* Login Section */
 
@@ -224,7 +236,12 @@ footer {
     padding: 4rem;
   }
 
-  /* NAV */
+   /* NAV */
+
+   nav .logo a{
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
 
   nav .nav-links{
     display: none;
@@ -232,7 +249,8 @@ footer {
 
   .hamburger{
     cursor: pointer;
-    padding-right: 4rem;
+    padding-right: 1rem;
+    transform: scale(.8);
   }
 
   .line{
@@ -246,18 +264,24 @@ footer {
   .line:nth-child(2){
     margin-bottom: .75rem;
   }
+  
+  .top-bar-open{
+    z-index: 9;
+    top: 0;
+    position: fixed;
+  }
 
-  .open{
+  .links-open{
     display: flex;
-    background: var(--medium-green);
+    background: var(--dark-gray);
     flex-direction: column;
-    position: absolute;
     width: 100%;
     height: 88vh;
     bottom: 0;
     z-index: 9;
     font-size: 2rem;
   }
+
 
   /* Login Section */
 
@@ -315,13 +339,19 @@ footer {
 
     /* NAV */
 
+    nav .logo a{
+      font-size: 2rem;
+      padding-left: 1rem;
+    }
+
     nav .nav-links{
       display: none;
     }
   
     .hamburger{
       cursor: pointer;
-      padding-right: 4rem;
+      padding-right: 1rem;
+      transform: scale(.8);
     }
   
     .line{
@@ -335,19 +365,24 @@ footer {
     .line:nth-child(2){
       margin-bottom: .75rem;
     }
-  
-    .open{
+    
+    .top-bar-open{
+      z-index: 9;
+      top: 0;
+      position: fixed;
+    }
+
+    .links-open{
       display: flex;
-      background: var(--medium-green);
+      background: var(--dark-gray);
       flex-direction: column;
-      position: absolute;
       width: 100%;
       height: 88vh;
       bottom: 0;
       z-index: 9;
       font-size: 2rem;
     }
-  
+
   /* Login Section */
 
   #loginSec {

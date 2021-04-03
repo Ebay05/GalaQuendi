@@ -73,6 +73,16 @@ h3 {
   font-size: 1.75rem;
 }
 
+.fixed{
+  position: fixed;
+  z-index: 9;
+}
+
+hr{
+  width: 90%;
+  background: var(--white-with-opacity);
+}
+
 /* Inputs */
 
 input[type="text"] {
@@ -203,11 +213,6 @@ input[type=checkbox]:checked:disabled + label:before {
 
 .ai-c{
   align-items: center;
-}
-
-hr{
-  width: 90%;
-  background: var(--white-with-opacity);
 }
 
 /******* MEDIAS *******/
