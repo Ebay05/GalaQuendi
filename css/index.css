@@ -238,11 +238,11 @@ footer {
 
    /* NAV */
 
-   nav .logo a{
+   .top-bar .logo a{
     font-size: 2rem;
     padding-left: 1rem;
   }
-
+  
   nav .nav-links{
     display: none;
   }
@@ -339,12 +339,12 @@ footer {
 
     /* NAV */
 
-    nav .logo a{
+    .top-bar .logo a{
       font-size: 2rem;
       padding-left: 1rem;
     }
 
-    nav .nav-links{
+    .top-bar .nav-links{
       display: none;
     }
   
@@ -436,5 +436,9 @@ footer {
   #features .item {
     margin: 2rem auto;
     padding: 0 1rem;
+  }
+
+  #features .item p{
+    padding: 0 5rem;
   }
 }
